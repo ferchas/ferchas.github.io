@@ -19,18 +19,29 @@ gulp.task('build', ['html']);
 
 // inject all partials on html
 gulp.task('html', ['inject','partials'], function() {
-    var partialsInjectFile = gulp.src(path.join(conf.paths.tmp, '/partials/*/*.html'), {
-        read: false
-    });
+    var partialsInjectFile = gulp.src(path.join(conf.paths.dist, '/partials/*/*.html'));
     var partialsInjectOptions = {
         starttag: '<!-- inject:partials -->',
-        ignorePath: path.join(conf.paths.tmp, '/partials'),
-        addRootSlash: false
+        transform: function (filePath, file) {
+          // return file contents as string
+          return file.contents.toString('utf8');
+        }
+    };
+
+    var sourcesCSS = gulp.src(path.join(conf.paths.dist, '/styles/*.css'),{
+      read: false
+    });
+
+    var sourcesOptions = {
+      ignorePath: path.join(conf.paths.dist, '/'),
     };
 
 
-    return gulp.src(path.join(conf.paths.tmp, '/serve/*.html'))
+
+
+    return gulp.src(path.join(conf.paths.src, '/index.html'))
         .pipe($.inject(partialsInjectFile, partialsInjectOptions))
+        .pipe($.inject(sourcesCSS, sourcesOptions))
         .pipe(gulp.dest(path.join(conf.paths.dist, '/')))
         .pipe($.size({
             title: path.join(conf.paths.dist, '/'),
@@ -47,5 +58,5 @@ gulp.task('partials', function() {
             spare: true,
             quotes: true
         }))
-        .pipe(gulp.dest(conf.paths.tmp + '/partials/'));
+        .pipe(gulp.dest(conf.paths.dist + '/partials/'));
 });
