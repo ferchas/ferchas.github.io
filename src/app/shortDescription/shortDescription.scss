@@ -1,3 +1,7 @@
+.title-product {
+  text-align: center;
+}
+
 .short-description {
     text-align: center;
     margin-bottom: 15px;
@@ -22,6 +26,16 @@ section * {
     padding-right: 518px;
     width: 42px;
     overflow: hidden;
+}
+
+.product-gallery .fist-img {
+  min-height: 425px;
+  width: 500px;
+  height: 281px;
+}
+
+.procust-carousel {
+    display: inline-block;
 }
 
 .short-description form {
@@ -70,4 +84,38 @@ section * {
 
 strong {
     font-weight: bold;
+}
+.stock-quantity {
+  padding: 0px 10px 10px 0px ;
+}
+
+.stock-quantity label {
+    padding-right: inherit;
+}
+.stock-quantity-inputs {
+    display: inline-block;
+}
+
+.stock-quantity-inputs input[type=number] {
+    width: 27px;
+}
+
+
+.installments-quantity label {
+    padding-right: 15px;
+}
+.installments-quantity-inputs {
+    vertical-align: top;
+    display: inline-block;
+}
+
+.installments-quantity-inputs input[type=select] {
+    width: 36px;
+}
+
+.action-row {
+    padding-top: 20px;
+}
+.buyer-ms {
+    padding-top: 10px;
 }

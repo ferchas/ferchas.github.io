@@ -66,6 +66,8 @@
         "console": false,
         "alert": false,
         "require": false,
-        "exports": false
+        "exports": false,
+        "ch": false,
+        "$": false
     }
 }

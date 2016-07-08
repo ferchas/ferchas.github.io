@@ -31,7 +31,7 @@ gulp.task('styles', function() {
             path.join(conf.paths.src, '/app/index.scss')
         ])
         .pipe($.inject(injectFiles, injectOptions))
-        // .pipe(wiredep(_.extend({}, conf.wiredep)))
+        .pipe(wiredep(_.extend({}, conf.wiredep)))
         .pipe($.sourcemaps.init())
         .pipe($.sass(sassOptions)).on('error', conf.errorHandler('RubySass'))
         .pipe($.autoprefixer()).on('error', conf.errorHandler('Autoprefixer'))

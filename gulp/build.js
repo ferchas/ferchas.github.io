@@ -39,7 +39,7 @@ gulp.task('html', ['inject','partials'], function() {
 
 
 
-    return gulp.src(path.join(conf.paths.src, '/index.html'))
+    return gulp.src(path.join(conf.paths.dist, '/index.html'))
         .pipe($.inject(partialsInjectFile, partialsInjectOptions))
         .pipe($.inject(sourcesCSS, sourcesOptions))
         .pipe(gulp.dest(path.join(conf.paths.dist, '/')))

@@ -1,0 +1,11 @@
+{
+  "name": "test-ml",
+  "description": "",
+  "main": "gulpfile.js",
+  "author": "Fernando De Caro <fer3zip@gmail.com> (https://ferchas.github.io/)",
+  "license": "MIT",
+  "homepage": "https://ferchas.github.io/dist/",
+  "dependencies": {
+    "jquery": "1.10.2"
+  }
+}
