@@ -1,1 +1,0 @@
-window.onload=function(){"use strict";$(".myCarousel").carousel({})};
