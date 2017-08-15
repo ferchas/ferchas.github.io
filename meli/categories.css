@@ -27,6 +27,7 @@
   font-size: 14px;
   max-width: 1220px;
   display: flex;
+  overflow: hidden;
 }
 
 .nav-categs[hidden] {
@@ -39,7 +40,7 @@
 }
 
 .nav-categs ul {
-  margin: 0;
+  margin: 4px 0 0 0;
   padding: 0;
   list-style: none;
 }
@@ -141,7 +142,7 @@ a.nav-categs-departments__more {
 .nav-categs-detail__header h1 {
   font-size: 19px;
   color: #333;
-  margin: 0 0 15px;
+  margin: 0 0 16px;
   font-weight: 300;
 }
 
@@ -185,12 +186,12 @@ a.nav-categs-departments__more {
   font-size: 15px;
   font-weight: 600;
   color: #353535;
-  margin: 0 10% 3px;
+  margin: 5px 14% 15px;
 }
 
 .nav-categs-detail__categ-list a {
-  line-height: 1.95;
-  color: #666 !important;
+  line-height: 1.85;
+  color: #999 !important;
   font-weight: 300;
 }
 
@@ -225,10 +226,8 @@ a.nav-categs-departments__more {
 
 .nav-categs-detail__categ[data-type='full']::after {
   content: '';
-  width: 30px;
+  padding: 22px 0 0 0;
   display: block;
-  padding-bottom: 18px;
-  margin-bottom: 10px;
 }
 
 
@@ -246,7 +245,7 @@ a.nav-categs-departments__more {
 
 .nav-categs-detail__list a {
   width: 88px;
-  height: 48px;
+  height: 64px;
   border-radius: 4px;
   border: 1px solid #ddd;
   float: right;
@@ -262,7 +261,7 @@ a.nav-categs-departments__more {
 .flexDisplay {
   display: flex;
   flex-flow: column wrap;
-  height: 408px;
+  height: 396px;
   max-width: 100%;
   overflow: hidden;
   align-content: stretch;
