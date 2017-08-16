@@ -130,7 +130,7 @@ a.nav-categs-departments__more {
 
 .nav-categs-detail {
   overflow: hidden;
-  padding: 30px 36px 0px;
+  padding: 35px 36px 0px;
   background-color: #fff;
 }
 
@@ -261,7 +261,7 @@ a.nav-categs-departments__more {
 .flexDisplay {
   display: flex;
   flex-flow: column wrap;
-  height: 396px;
+  height: 390px;
   max-width: 100%;
   overflow: hidden;
   align-content: stretch;
