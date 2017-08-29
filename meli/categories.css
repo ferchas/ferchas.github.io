@@ -1,6 +1,7 @@
 .nav-categs {
   z-index: 899;
-  position: absolute;
+  position: fixed;
+  overflow-y: auto;
   width: 100%;
   height: 100%;
   background-color: rgba(51, 51, 51, 0.3);
