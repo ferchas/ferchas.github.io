@@ -126,6 +126,7 @@ class Departments {
 
   // TODO: This MUST happen on the server
   _shapeModel(raw) {
+      console.log("###### raw", raw);
       const data = Object.assign({}, raw);
       const columns = 3;
       const full = 11;
@@ -219,6 +220,7 @@ const categoriesTemplate = () => (`
 
 class Categories {
   constructor(triggerSelector, model) {
+    console.log(triggerSelector,model);
     // DOM
     this._renderStructure();
     this.el = document.querySelector('[data-js="nav-categs"]');
